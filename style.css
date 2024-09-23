@@ -1,5 +1,8 @@
 .container {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
 }
 
 .first {
@@ -8,19 +11,52 @@
     color: black;
     width: 300px;
     height: 200px;
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
+    border-radius: 10px;
 
     /* border-bottom-right-radius: ; */
 }
 
 .second {
     color: white;
+    background: white;
     background-color: rgb(128, 0, 122);
     border: 2px solid rgb(128, 0, 111);
+    /* box-shadow: white 0px 1px 4px, transparent 0px 0px 0px 3px; */
     width: 50px;
     height: 50px;
     border-radius: 50%;
     position: absolute;
-    bottom: -1rem;
-    right: -7%;
+    bottom: 0rem;
+    right: 0%;
+    box-shadow: 0px 1px 0px 10px white;
 }
+.second::before {
+    content: '';
+    position: absolute;
+    /* background-color: rgb(218, 73, 0); */
+    background: transparent;
+    width: 1.25rem;
+    height: 1.25rem;
+    bottom: 57px;
+    left: 32px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 9px 7px 0 1px #fff;
+    
+}
+.second::after {
+    content: '';
+    position: absolute;
+    /* background-color: rgb(218, 73, 0); */
+    background: transparent;
+    width: 1.25rem;
+    height: 1.25rem;
+    bottom: -2px;
+    left: -29px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 8px 10px 0 1px #fff
+    /* box-shadow: 0.313rem 0.313rem 0 0.3rem #fff; */
+}
+
+
